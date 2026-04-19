@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="elshop.client/elshop.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="ElShop.Server/ElShop.Server.csproj" />
+</Solution>

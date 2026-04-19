@@ -1,0 +1,8 @@
+.vs/
+
+# .NET build output
+bin/
+obj/
+
+# Node
+node_modules/
