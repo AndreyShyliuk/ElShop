@@ -53,6 +53,7 @@ dotnet build       # build only
 
 Project-specific skills live in `.claude/skills/`. Read the relevant skill file before starting work:
 
+- `.claude/skills/ticket-workflow.md` — how to pick a ticket, mark it in progress, implement, and close it after merge
 - `.claude/skills/feature-dev.md` — clean architecture, testing, and commit/PR conventions for any feature
 - `.claude/skills/pr-review.md` — automated PR review workflow (remote agent, webhook setup, merge rules)
 
