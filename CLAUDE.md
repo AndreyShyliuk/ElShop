@@ -49,6 +49,13 @@ dotnet run         # run with https launch profile
 dotnet build       # build only
 ```
 
+## Skills
+
+Project-specific skills live in `.claude/skills/`. Read the relevant skill file before starting work:
+
+- `.claude/skills/feature-dev.md` — clean architecture, testing, and commit/PR conventions for any feature
+- `.claude/skills/pr-review.md` — automated PR review workflow (remote agent, webhook setup, merge rules)
+
 ## Ticket Workflow
 
 For every ticket/task, follow this sequence without asking for confirmation at each step:
