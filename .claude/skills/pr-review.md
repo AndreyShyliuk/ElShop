@@ -69,11 +69,18 @@ If tests pass and no major issues remain:
 gh pr merge <NUMBER> --squash --delete-branch --repo AndreyShyliuk/ElShop
 ```
 
-The `--delete-branch` flag removes the remote branch automatically. If using the GitHub API directly, delete the branch separately:
+The `--delete-branch` flag removes the remote branch automatically. If using the GitHub API directly, delete the remote branch separately:
 
 ```bash
 curl -s -X DELETE "https://api.github.com/repos/AndreyShyliuk/ElShop/git/refs/heads/<BRANCH_NAME>" \
   -H "Authorization: token $GH_TOKEN"
+```
+
+Then delete the local branch (`-D` because squash merges are not detected as fully merged):
+
+```bash
+git checkout main && git pull
+git branch -D <BRANCH_NAME>
 ```
 
 ## If tests fail or blockers remain
