@@ -31,12 +31,16 @@ When reviewing a PR diff, check for:
 - Security issues: SQL injection, XSS, exposed credentials, missing input validation at system boundaries
 - Broken or missing dependency injection wiring
 
-**Minor issues (comment only, do not block):**
+**Minor issues (fix before merging):**
 - Style or naming inconsistencies
 - Redundant comments
 - Missing `readonly` on injected fields
+- Unused imports
+- Deprecated APIs where a drop-in replacement exists
 
 ## Fix workflow
+
+Fix both major and minor issues before merging:
 
 ```bash
 gh pr checkout <NUMBER>
@@ -63,6 +67,13 @@ If tests pass and no major issues remain:
 
 ```bash
 gh pr merge <NUMBER> --squash --delete-branch --repo AndreyShyliuk/ElShop
+```
+
+The `--delete-branch` flag removes the remote branch automatically. If using the GitHub API directly, delete the branch separately:
+
+```bash
+curl -s -X DELETE "https://api.github.com/repos/AndreyShyliuk/ElShop/git/refs/heads/<BRANCH_NAME>" \
+  -H "Authorization: token $GH_TOKEN"
 ```
 
 ## If tests fail or blockers remain
