@@ -6,3 +6,6 @@ obj/
 
 # Node
 node_modules/
+
+# Claude Code local settings (may contain tokens)
+.claude/settings.local.json
