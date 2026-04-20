@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ElShop.Server.API.Controllers;
@@ -7,5 +8,6 @@ namespace ElShop.Server.API.Controllers;
 public class HealthController : ControllerBase
 {
     [HttpGet]
+    [AllowAnonymous]
     public IActionResult Get() => Ok(new { status = "healthy" });
 }
