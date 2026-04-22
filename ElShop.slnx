@@ -4,4 +4,5 @@
     <Deploy />
   </Project>
   <Project Path="ElShop.Server/ElShop.Server.csproj" />
+  <Project Path="ElShop.Tests/ElShop.Tests.csproj" />
 </Solution>
